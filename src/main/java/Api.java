@@ -16,11 +16,11 @@ public class Api {
         var url ="https://newsapi.org/v2/everything?q="+sum+"&from=2023-01-15&sortBy=publishedAt&apiKey=cfc3fe2a84bc415b8e2520e1425c5607";
 
         //HttpRequest
-           var request = HttpRequest.newBuilder().GET().uri(URI.create(url)).build();
+        var request = HttpRequest.newBuilder().GET().uri(URI.create(url)).build();
 
-           var client = HttpClient.newBuilder().build();
+        var client = HttpClient.newBuilder().build();
 
-          var response= client.send(request, HttpResponse.BodyHandlers.ofString());
+        var response= client.send(request, HttpResponse.BodyHandlers.ofString());
 
 
             System.out.println(response.statusCode());
